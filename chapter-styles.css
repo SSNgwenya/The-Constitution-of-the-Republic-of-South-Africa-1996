@@ -1,0 +1,280 @@
+/* ----------------------------General Reset ------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------Body Styling -----------------------------------*/
+body, html {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: black;
+    background-color:white;
+    height: 100%;
+    overflow: auto;
+}
+
+/* -------------------------Container for scrollable content ----------------*/
+.container {
+    height: 100%;
+    scroll-snap-type: y mandatory;
+}
+
+/* ----------------------------Alternate Background Colors for Sections -----------*/
+.section, .chapter2 p {
+    color: black;
+}
+
+
+.section, .chapter4 p {
+    color: black;
+}
+.section, .chapter5 p {
+    color: black;
+}
+.section, .chapter6 p {
+    color: black;
+}
+.section, .chapter7 p {
+    color: black;
+}
+.section, .chapter8 p {
+    color: black;
+}
+.section, .chapter9 p {
+    color: black;
+}
+.section, .chapter10 p {
+    color: black;
+}
+.section, .chapter11 p {
+    color: black;
+}
+.section, .chapter12 p {
+    color: black;
+}
+.section, .chapter13 p {
+    color: black;
+}
+.section, .chapter14 p {
+    color: black;
+}
+
+/* -------------------Content Styling------------------------------------------ */
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+}
+
+/*-------------------- Content Header Styling ---------------------------------------*/
+.content-header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/kruger_national_park-1714.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 30px; 
+    color: white; 
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* -------------------------------------Header H1 Styling --------------------------------*/
+.content-header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center; 
+    font-size: 2.5em;
+}
+
+/* ---------------------------------Chapter Section Styling -------------------------------------*/
+[class^="chapter"] {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/*------------------------------ Chapter Specific Styles (From Chapter 1 to Chapter 14) -----------------------------------------*/
+
+/*-----------------Chapter 1 ---------------------*/
+/* Article Styles */
+article {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+.section, .chapter1 p {
+    color: black;
+}
+
+article h3 {
+    margin-top: center;
+    margin-bottom: auto;
+}
+
+h3 {
+    display: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+/* List Styles */
+ol, li {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+/*----------------Chapter 2---------------------*/
+.chapter2 {
+    @media (max-width: 600px) {
+        table {
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 8px;
+        }
+        body {
+            font-size: 13px;
+        }
+    }
+} /* Light cyan background for Chapter 2 */
+
+
+
+
+
+/* -------------------------------------------Icon Styling --------------------------------------------*/
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+/* -------------------------------------Home Icon Styling -----------------------------------------------*/
+.home-icon {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* ----------------------------------Home Icon Hover Effect -----------------------------------------------*/
+.home-icon:hover {
+    background-color: #45a049;
+}
+
+/* -----------Home Title Styling ----------------------*/
+.home-title {
+    font-size: 1.2em;
+}
+
+/*------------------------------------- Article Styling -----------------------------------------------*/
+article {
+    max-width: 800px;
+    margin: 20px;
+}
+
+p {
+    font-size: 1em;
+    line-height: 2em;
+    margin: 10px 0;
+    color: white;
+    text-align: justify;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.highlight {
+    background-color: yellow; /* Highlight specific paragraphs */
+    padding: 0 5px; /* Add padding for emphasis */
+}
+
+/*----------------------------------------------CSS for small screen----------------------------------------*/
+@media only screen and (max-width: 600px) {
+
+    p {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    .section {
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+
+    .content-header {
+        padding: 50px 40px; /* Reduced padding for smaller screens */
+        background-size: cover; /* Ensure background image fits */
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    .content-header h1 {
+        font-size: 1.4em; /* Smaller font for the header title */
+    }
+
+    .sidebar {
+        display: none;
+        width: 0;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+        overflow-y: auto; /* Allows vertical scrolling in main content */
+        height: 100vh; /* Adjusts to screen height for better scrolling */
+    }
+
+    .chapter-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        width: 100%;
+        margin-left: 0;
+        position: relative; /* Set to relative to avoid covering content */
+    }
+
+    /* Prevent Background Blur on Chapter Pages */
+    body {
+        overflow-y: auto;
+        background-color: #00000000;
+        background-size: cover; /* Ensures the image covers the screen */
+        background-position: center; /* Centers the image */
+        background-attachment: fixed;
+        font-size: 13px;
+    }
+}

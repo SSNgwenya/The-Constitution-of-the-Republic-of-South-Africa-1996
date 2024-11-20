@@ -1,0 +1,414 @@
+/* -------------------------------General Reset ------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------Body Styling -----------------------------------*/
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    position: relative; /* Required for positioning the pseudo-element */
+    overflow: hidden; /* Prevents overflow from the pseudo-element */
+}
+
+/* -----------------------Background Image Styling ---------------------------------------*/
+body::before {
+    content: ''; /* Creates an empty pseudo-element */
+    position: fixed; /* Fixes the background image */
+    top: 0; /* Positions at the top */
+    left: 0; /* Positions at the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-image: url('images/coat_of_arms.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the whole page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    filter: blur(200px); /* Apply blur effect */
+    z-index: -1; /* Places the pseudo-element behind the content */
+}
+
+/*---------------------------- Add styles for content to ensure readability----------------- */
+.content {
+    margin-left: 250px;
+    position: relative; /* Ensures content is above the pseudo-element */
+    z-index: 1; /* Sets a higher z-index than the pseudo-element */
+    padding: 20px;
+    backdrop-filter: blur(5px); /* Optional: adds a subtle blur effect to the content area */
+}
+
+
+
+/* --------------------------Banner Image Styling ---------------------------------------------*/
+/* Slider Container */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+/* Slide wrapper */
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Smooth transition for sliding */
+}
+
+/* Individual slide */
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+/* Banner Content: Image and Header */
+.banner-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Header styling */
+.content-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    /*font-weight: bold;*/
+    z-index: 1; /* Ensure it's on top of the image */
+}
+
+/*------------------------------------ Caution Message Slide ----------------------------------------------------------*/
+
+/* Caution Slide Styling */
+.caution-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Image Styling for the second slide */
+#caution-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Styling for the caution message */
+.banner-message {
+    position: absolute;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);  /* Semi-transparent background */
+    border-radius: 8px;
+    width: 80%; /* Control the width of the caution message box */
+}
+
+/* Text Styling for the caution message */
+.banner-message h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.banner-message p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Optional: Hover effect for caution slide */
+.caution-slide:hover {
+    opacity: 0.9;
+}
+
+
+/*-------------------------------------------------------------------------------------*/
+.chapter-cards {
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    gap: 20px; /* Space between the buttons */
+    justify-content: center; /* Center the buttons */
+    padding: 20px; /* Padding around the buttons */
+}
+
+/* ----------------Button Styling for Chapters--------------------------------------------- */
+.card {
+    width: 180px; /* Set width for each button */
+    height: 120px; /* Fixed height for uniformity */
+    background-color: #002395; /* Button background color */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 10px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Animation on hover */
+    display: flex; /* Allows flexbox layout inside each button */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content */
+    justify-content: center; /* Center content vertically */
+    text-overflow: ellipsis; /* Handle overflow text */
+    overflow: hidden; /* Hide overflow text */
+    z-index: 1; /* brings buttons on top of the pseudo-element */
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: green; /* Change background color on hover */
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+/* ---------------------------Content Header Background ------------------------------*/
+.highlight {
+    background-color: yellow; /* Highlight specific paragraphs */
+    padding: 0 5px; /* Add padding for emphasis */
+}
+
+
+/* -----------------------------Footer Styling------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-left: 250px; /* Keep the footer aligned with the sidebar */
+}
+
+/* -----------------------Sidebar Styling --------------------------------------------*/
+.sidebar {
+    width: 250px;
+    background-color: #e03c31;
+    color: black;
+    position: fixed;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #ecf0f1;
+}
+
+.dropdown-btn {
+    background-color: #002395;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background-color: green;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #e03c31;
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.dropdown-content li {
+    margin: 5px 0;
+}
+
+.dropdown-content li a {
+    color:black;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    color: black;
+}
+
+
+/* --------------------------------Search Bar Styling----------------------------------------- */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Space above and below the search bar */
+    padding: 10px;
+}
+
+.search-bar input[type="text"] {
+    width: 60%; /* Width of the input field */
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #2980b9;
+}
+
+/*---------search results--------------*/
+.search-results {
+    margin-top: 20px;
+}
+
+.search-result-item {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.search-result-item:hover {
+    text-decoration: underline;
+}
+
+.search-result-snippet {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.search-result:focus {
+    outline: none;
+    font-weight: bold;
+}
+
+.search-results p {
+    color: #888;
+    font-style: italic;
+}
+
+
+/*----------------------------------------------CSS for small screen----------------------------------------*/
+@media only screen and (max-width: 600px) {
+    p {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    .section {
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+
+    .content-header {
+        padding: 20px 10px;
+        font-size: 1em;
+        font-weight: bold;
+        color: white;
+        border-radius: 10px;
+        margin: auto;
+    }
+
+     .content-header h1 {
+        font-size: 1.4em; /* Smaller font for the header title */
+    }
+
+    .sidebar {
+        display: none;
+        width: 0;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+        overflow-y: auto; /* Allows vertical scrolling in main content */
+        height: 100vh; /* Adjusts to screen height for better scrolling */
+    }
+
+    .chapter-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        background-color: #002395; /* Button background color */
+        border: none; /* No border */
+        border-radius: 10px; /* Rounded corners */
+        color: white; /* Text color */
+        text-align: center; /* Center text */
+        padding: 10px; /* Padding inside the button */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Animation on hover */
+        display: flex; /* Allows flexbox layout inside each button */
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center content */
+        justify-content: center; /* Center content vertically */
+        text-overflow: ellipsis; /* Handle overflow text */
+        overflow: hidden; /* Hide overflow text */
+        z-index: 1; /* brings buttons on top of the pseudo-element */
+        cursor: pointer;
+    }
+    
+    .card:hover {
+        background-color: green; /* Change background color on hover */
+        transform: scale(1.05); /* Scale up on hover */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        width: 100%;
+        margin-left: 0;
+        position: relative; /* Set to relative to avoid covering content */
+    }
+    
+    body::before {
+        filter: blur(0.2px); /* Apply blur effect */
+    }
+
+    /*------------- Enable scrolling on the whole body----------- */
+    body {
+        overflow-y: auto;
+        background: url('images/coat_of_arms.jpg') no-repeat center center fixed;
+        background-size: cover; /* Ensures the image covers the screen */
+        background-position: center; /* Centers the image */
+        background-attachment: fixed;
+    }
+
+    
+}
+
+
+
+
+
+

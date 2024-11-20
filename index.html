@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South African Constitution</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/rsa.jpg" type="image/png">
+
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar Navigation with Dropdown -->
+        <nav class="sidebar">
+            <h2>South African Constitution</h2>
+            <button class="dropdown-btn">Chapters</button>
+            <ul class="dropdown-content">
+                <li><a href="chapters/chapter1.html">Chapter 1: Founding Provisions</a></li>
+                <li><a href="chapters/chapter2.html">Chapter 2: Bill of Rights</a></li>
+                <li><a href="chapters/chapter3.html">Chapter 3: Co-operative Government</a></li>
+                <li><a href="chapters/chapter4.html">Chapter 4: Parliament</a></li>
+                <li><a href="chapters/chapter5.html">Chapter 5: The President and National Executive</a></li>
+                <li><a href="chapters/chapter6.html">Chapter 6: Provinces</a></li>
+                <li><a href="chapters/chapter7.html">Chapter 7: Local Government</a></li>
+                <li><a href="chapters/chapter8.html">Chapter 8: Courts and Administration of Justice</a></li>
+                <li><a href="chapters/chapter9.html">Chapter 9: State Institutions Supporting Constitutional Democracy</a></li>
+                <li><a href="chapters/chapter10.html">Chapter 10: Public Administration</a></li>
+                <li><a href="chapters/chapter11.html">Chapter 11: Security Services</a></li>
+                <li><a href="chapters/chapter12.html">Chapter 12: Traditional Leaders</a></li>
+                <li><a href="chapters/chapter13.html">Chapter 13: Finance</a></li>
+                <li><a href="chapters/chapter14.html">Chapter 14: General Provisions</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <div class="slider">
+                <div class="slides">
+                    <!-- First slide with dynamic content -->
+                    <div class="slide">
+                        <div class="banner-content">
+                            <img class="banner-image" id="dynamic-image" alt="Dynamic Image">
+                            <header class="content-header">
+                                <h2>The Constitution of the Republic of South Africa</h2>
+                            </header>
+                        </div>
+                    </div>
+
+                    <!-- Second slide with caution message -->
+                    <div class="slide caution-slide">
+                        <img class="banner-image" id="caution-image" alt="Caution Image">
+                        <div class="banner-message">
+                            <h2>Caution</h2>
+                            <p>Please be advised, the information on this website was not created by Saneliso Sunny Ngwenya. It is information made by the Government of the Republic of South Africa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <h2 style="text-align: center; color: white;">As adopted on 8 May 1996 and amended on 11 October 1996 by the Constitutional Assembly</h2>
+            <p style="text-align: center; color: yellow;">The Constitution of the Republic of South Africa, 1996, was approved by the Constitutional Court (CC) on 4 December 1996 and took effect on 4 February 1997.
+                <br>The Constitution is the supreme law of the land. No other law or government action can supersede the provisions of the Constitution.</p>
+            
+
+            <!-- Search Bar Section -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search for chapters..." />
+                <button type="button">Search</button>
+            </div>
+
+            <div class="search-results">
+                <!-- Search results will appear here dynamically -->
+            </div>
+
+            <section class="chapter-cards">
+                <!-- Each Chapter as a Button -->
+                <button class="card" onclick="location.href='chapters/chapter1.html';">
+                    <h3>1. Founding Provisions</h3>
+                </button>
+                <button class="card" onclick="location.href='chapters/chapter2.html';">
+                    <h3>2. Bill of Rights</h3>
+                </button>
+                <button class="card" onclick="location.href='chapters/chapter3.html';">
+                    <h3>3. Co-operative Government</h3>
+                </button>
+                <button class="card" onclick="location.href='chapters/chapter4.html';">
+                    <h3>4. Parliament</h3>
+                </button>
+                <button class="card" onclick="location.href='chapters/chapter5.html';">
+                    <h3>5. The President and National Executive</h3>
+                </button>
+                <button class="card" onclick="location.href='chapters/chapter6.html';">
+                    <h3>6. Provinces</h3>
+                </button>
+                <button class="card" onclick="location.href='chapters/chapter7.html';">
+                    <h3>7. Local Government</h3>
+                </button>
+                <button class="card" onclick="location.href='chapters/chapter8.html';">
+                    <h3>8. Courts and Administration of Justice</h3>
+                </button>
+                <button class="card" onclick="location.href='chapters/chapter9.html';">
+                    <h3>9. State Institutions Supporting Constitutional Democracy</h3>
+                </button>
+                <button class="card" onclick="location.href='chapters/chapter10.html';">
+                    <h3>10. Public Administration</h3>
+                </button>
+                <button class="card" onclick="location.href='chapters/chapter11.html';">
+                    <h3>11. Security Services</h3>
+                </button>
+                <button class="card" onclick="location.href='chapters/chapter12.html';">
+                    <h3>12. Traditional Leaders</h3>
+                </button>
+                <button class="card" onclick="location.href='chapters/chapter13.html';">
+                    <h3>13. Finance</h3>
+                </button>
+                <button class="card" onclick="location.href='chapters/chapter14.html';">
+                    <h3>14. General Provisions</h3>
+                </button>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; Made by Saneliso Sunny Ngwenya| SSNgwenya</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
