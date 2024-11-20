@@ -79,7 +79,7 @@ setImages();
 setInterval(showNextSlide, 5000);
 
 cautionSlide.addEventListener('click', function() {
-  window.open('https://www.gov.za/documents/constitution', '_blank');
+  window.open('https://www.gov.za/documents/constitution/constitution-republic-south-africa-1996-04-feb-1997', '_blank');
 });
 
 
